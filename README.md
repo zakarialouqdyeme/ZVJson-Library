@@ -52,7 +52,7 @@ The ZVJson library simplifies making HTTP GET requests and handling the response
 ### Sending a GET Request
 
 ```csharp
-ZVJson.GetRequest(url, (statusCode, response) =>
+StartCoroutine(ZVJson.GetRequest(url, (statusCode, response) =>
 {
     if (statusCode == 4)
     {
@@ -63,7 +63,7 @@ ZVJson.GetRequest(url, (statusCode, response) =>
         // Handle the error
         HandleError(statusCode);
     }
-});
+}));
 ```
 
 ## 5. Loading Images from URLs <a name="loading-images-from-urls"></a>
@@ -71,7 +71,7 @@ ZVJson.GetRequest(url, (statusCode, response) =>
 The ZVJson library includes features to efficiently load images from URLs and convert them into Unity sprites.
 
 ```csharp
-ZVJson.GetImageFromUrl(imageUrl, (statusCode, sprite) =>
+StartCoroutine(ZVJson.GetImageFromUrl(imageUrl, (statusCode, sprite) =>
 {
     if (statusCode == 4)
     {
@@ -82,7 +82,7 @@ ZVJson.GetImageFromUrl(imageUrl, (statusCode, sprite) =>
         // Handle the error
         HandleError(statusCode);
     }
-});
+}));
 ```
 
 ## 6. Examples <a name="examples"></a>
